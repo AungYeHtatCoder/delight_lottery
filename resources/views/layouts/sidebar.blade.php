@@ -81,32 +81,32 @@
 						</div>
 					</div>
       {{-- User Interface --}}
-      <div class="menu-header">User Interface</div>
+      <div class="menu-header">Lottery Interface</div>
 					<div class="menu-item has-sub">
 						<a href="javascript:;" class="menu-link">
 							<div class="menu-icon">
 								<i class="bi bi-layout-sidebar"></i>
 								{{-- <span class="w-5px h-5px rounded-3 bg-theme position-absolute top-0 end-0 mt-3px me-3px"></span> --}}
 							</div>
-							<div class="menu-text d-flex align-items-center">Home Page</div>
+							<div class="menu-text d-flex align-items-center">LotteryManagement</div>
 							<span class="menu-caret"><b class="caret"></b></span>
 						</a>
 						<div class="menu-submenu">
 							<div class="menu-item">
-								<a href="" target="_blank" class="menu-link">
-									<div class="menu-text">Home Banners</div>
+								<a href="{{ route('admin.categories.index') }}" class="menu-link">
+									<div class="menu-text">LotteryCategory</div>
 								</a>
 							</div>
-							{{-- <div class="menu-item">
-								<a href="pos_kitchen_order.html" target="_blank" class="menu-link">
-									<div class="menu-text">Kitchen Order</div>
+							<div class="menu-item">
+								<a href="{{ route('admin.lotteries.create')}}" class="menu-link">
+									<div class="menu-text">Ticket Create</div>
 								</a>
-							</div> --}}
-							{{-- <div class="menu-item">
-								<a href="pos_counter_checkout.html" target="_blank" class="menu-link">
-									<div class="menu-text">Counter Checkout</div>
+							</div>
+							<div class="menu-item">
+								<a href="{{ route('admin.lotteries.index')}}" class="menu-link">
+									<div class="menu-text">LotteryTicketList</div>
 								</a>
-							</div> --}}
+							</div>
 							{{-- <div class="menu-item">
 								<a href="pos_table_booking.html" target="_blank" class="menu-link">
 									<div class="menu-text">Table Booking</div>

@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\RolesController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Admin\TicketController;
+use App\Http\Controllers\Admin\LotteryController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PermissionController;
 
 /*
@@ -44,6 +47,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
     Route::put('/change-phone-address', [ProfileController::class, 'PhoneAddressChange'])->name('changePhoneAddress');
     Route::put('/change-kpay-no', [ProfileController::class, 'KpayNoChange'])->name('changeKpayNo');
     Route::put('/change-join-date', [ProfileController::class, 'JoinDate'])->name('addJoinDate');
+    Route::resource('categories', CategoryController::class);
+    Route::resource('lotteries', LotteryController::class);
+    Route::post('/lottery-store', [App\Http\Controllers\Admin\LotteryController::class, 'lotteryStore'])->name('lotteryStore');
+    //ticket 
+    Route::resource('tickets', TicketController::class);
+
+
     
 });
     
